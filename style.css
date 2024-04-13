@@ -8,10 +8,11 @@
     background: url(assets/images/backround.jpg);
     background-position: center;
     background-size: cover;
-    height: 110vh;
+    height: 125vh;
     position: relative;
     font-family: sans-serif;
 }
+
 .navbar{
     width: 86%;
     display: flex;
@@ -49,10 +50,11 @@ ul li a:hover{
     color:aqua
 }
 
-.imgMain {
+.videomain {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 400px;
 }
 
 .info{
@@ -61,7 +63,7 @@ ul li a:hover{
 
 .info h1{
     font-size: 50px;
-    color: rgb(0, 0, 0);
+    color: rgb(16, 197, 221);
 }
 
 .info h3{
@@ -71,7 +73,7 @@ ul li a:hover{
 }
 
 .info span{
-    color: rgb(34, 34, 109);
+    color: rgb(30, 214, 238);
 }
 .info a{
     text-decoration: none;
@@ -110,11 +112,13 @@ body{
 .icons i{
     text-decoration: none;
     color: #c4c4c4;
+    cursor: pointer;
 }
 .icons i{
     margin-left: 7%;
     font-size: 30px;
     transition: .4s ease;
+
 }
 
 .icons i:hover{
@@ -125,4 +129,6 @@ body{
     display: block;
     margin-left: 55%;
     margin-right: auto;
+    cursor: pointer;
 }
+

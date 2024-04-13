@@ -63,9 +63,14 @@ ul li a:hover{
     line-height: 20px;
 }
 
+.info span{
+    
+}
+
 .icons i{
     text-decoration: none;
     color: #c4c4c4;
+    cursor: pointer;
 }
 .icons i{
     margin-left: 7%;
@@ -75,4 +80,19 @@ ul li a:hover{
 
 .icons i:hover{
     color: rgb(59,174,209);
+}
+
+.btn{
+    margin-left: 7%;
+    font-size: 20px;
+    transition: .4s ease;
+    text-decoration: none;
+    cursor: pointer;
+    color: #c4c4c4;
+    border: none;
+}
+
+.btn:hover{
+    color:aqua
+    
 }
