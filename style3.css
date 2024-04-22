@@ -62,11 +62,6 @@ ul li a:hover{
     letter-spacing: 2px;
     line-height: 20px;
 }
-
-.info span{
-    
-}
-
 .icons i{
     text-decoration: none;
     color: #c4c4c4;
@@ -94,5 +89,4 @@ ul li a:hover{
 
 .btn:hover{
     color:aqua
-    
 }
