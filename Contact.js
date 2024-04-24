@@ -1,0 +1,59 @@
+function handleFormSubmit (event) {
+    event.preventDefault()
+    console.log(event);
+
+    // console.log(document);
+    console.log(document);
+    const emailInput = document.getElementById("email")
+    const messageInput = document.getElementById("message")
+
+    // console.log(emailInput);
+    const isEmailValid = emailInput.value.trim() !== '' && emailInput.validity.valid
+    console.log(isEmailValid);
+    let isMessageValid = messageInput.value.trim() !== '';
+    console.log({isMessageValid});
+    
+    const isFormValid = isEmailValid && isMessageValid
+
+    if(isFormValid) {
+        // grab our data from the form
+        const formData = new FormData(event.target)
+        console.log(formData);
+        fetch('https://formspree.io/f/xyyrllqd',
+            {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            } 
+        )
+        .then( response => response.json() )
+        .then( data => {
+        console.log(data);
+        if(data.ok){
+            alert('Email Successfully submitted')
+        }
+    })
+    
+    console.log('code is running');
+    } else {
+        //alert the user that the form is invalid
+        if(isEmailValid !== true) {
+            // display the email span
+            const emailSpan = document.getElementById('email-span')
+            console.log(emailSpan.classList);
+            emailSpan.classList.remove('hidden')
+            console.log(emailSpan.classList);
+        }
+        if(isMessageValid !== true) {
+            // display the message span
+            const messageSpan = document.getElementById('message-span')
+            messageSpan.classList.remove('hidden')
+            
+        }
+        }
+    }
+
+
+

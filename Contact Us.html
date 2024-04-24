@@ -4,7 +4,7 @@
     <title>My Portfolio Website</title>
     <link rel="stylesheet" href="style3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="./index.js"></script>
+    <script src="./Contact.js"></script>
 </head>
 <body>
 
@@ -34,7 +34,7 @@
         <br>
 
     </div>
-    <footer>
+    
         <div class="icons">
             <i class="fa-brands fa-twitter"> George_Molambo</i>
         </div>
@@ -47,6 +47,7 @@
         <br>
         <div class="icons">
             <i class="fa-brands fa-instagram">   George@Molambo_</i>
+        </div>
         <br>
         <br>
         <div class="icons">
@@ -54,8 +55,34 @@
         </div>
         <br>
         <button class="btn">SUBMIT</button>
+       
+        <div class="content">
+        <h1>Contact Me</h1>
+        <p>Please fill up the following form the hit "send" and I'll get back to you as soon as I can.Be on the lookout for my reply in your emails</p>
         </div>
-    </footer>
+        <br> 
+
+
+    <form onsubmit="handleFormSubmit(event)"
+    >
+        <h2>Contact Form</h1>
+        <br>
+        
+
+        <label>
+          <input type="text" name="first" id="first" placeholder="First Name" required>
+          <input type="text" name="last" id="last" placeholder="Last Name" required>
+          <input type="email" name="email" id="email" placeholder="Email Address" >
+          <span class="hidden" id="email-span">email is invalid</span>
+        </label>
+
+        <label>
+          <textarea rows="5" cols="60" name="message" id="message" placeholder="Type in your message here"></textarea>
+          <span class="hidden" id="message-span">message is invalid</span>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit">Send Message</button>
+    </form>
     
 </body>
 </html>
